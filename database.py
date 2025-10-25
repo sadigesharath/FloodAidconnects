@@ -6,13 +6,7 @@ import streamlit as st
 def get_connection():
     """Get database connection using environment variables"""
     try:
-        conn = sqlite3.connect(
-            host=os.getenv("PGHOST"),
-            database=os.getenv("PGDATABASE"),
-            user=os.getenv("PGUSER"),
-            password=os.getenv("PGPASSWORD"),
-            port=os.getenv("PGPORT", 5432)
-        )
+        
         return conn
     except Exception as e:
         st.error(f"Database connection failed: {e}")
