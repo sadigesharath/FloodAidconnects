@@ -1,4 +1,4 @@
-import psycopg2
+import sqlite3
 import os
 from datetime import datetime
 import streamlit as st
@@ -6,7 +6,7 @@ import streamlit as st
 def get_connection():
     """Get database connection using environment variables"""
     try:
-        conn = psycopg2.connect(
+        conn = sqlite3.connect(
             host=os.getenv("PGHOST"),
             database=os.getenv("PGDATABASE"),
             user=os.getenv("PGUSER"),
