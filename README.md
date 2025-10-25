@@ -1,4 +1,4 @@
-# 🌊 FloodRescueNet – Emergency Flood Response & Coordination Platform
+# 🌊 FloodAidconnects – Emergency Flood Response & Coordination Platform
 
 ![Platform](https://img.shields.io/badge/Platform-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
