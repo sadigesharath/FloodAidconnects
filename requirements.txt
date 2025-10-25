@@ -3,3 +3,4 @@ pandas
 numpy
 pillow
 requests
+psycopg2-binary
