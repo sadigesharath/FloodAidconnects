@@ -8,6 +8,19 @@ def hash_password(password):
 
 def authenticate_user(username, password):
     """Authenticate user and return user ID if successful"""
+    
+    # DEMO CREDENTIALS - Check these first before database
+    demo_users = {
+        "citizen2": {"password": "password123", "role": "citizen", "user_id": 1},
+        "gov_official": {"password": "admin123", "role": "government", "user_id": 2},
+        "rescue1": {"password": "rescue123", "role": "rescue", "user_id": 3}
+    }
+    
+    # Check demo credentials first
+    if username in demo_users and demo_users[username]["password"] == password:
+        return demo_users[username]["user_id"]
+    
+    # If not demo user, check database
     users = get_user_by_username(username)
     
     if users and len(users) > 0:
@@ -33,6 +46,19 @@ def register_user(username, password, role="citizen"):
 
 def get_user_role(user_id):
     """Get user role by user ID"""
+    
+    # DEMO USER ROLES
+    demo_roles = {
+        1: "citizen",
+        2: "government",
+        3: "rescue"
+    }
+    
+    # Check demo users first
+    if user_id in demo_roles:
+        return demo_roles[user_id]
+    
+    # Otherwise check database
     from database import execute_query
     
     result = execute_query(
