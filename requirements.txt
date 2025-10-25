@@ -5,3 +5,4 @@ pillow
 requests
 psycopg2-binary
 folium
+streamlit-folium
